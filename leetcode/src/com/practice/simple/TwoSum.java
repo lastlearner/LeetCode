@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * @ProjectName: leetcode_practice
  * @Package: simple
- * @ClassName: TwoSum
+ * @ClassName: NO.1 TwoSum 两数之和
  * @Author: liaoyilang
  * @Description: ${description}
  * @Date: 2019/9/29 下午4:14

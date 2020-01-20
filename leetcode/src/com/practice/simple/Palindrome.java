@@ -1,7 +1,7 @@
 package com.practice.simple;
 
 /**
- * @Description: 判断是否为回文数
+ * @Description: NO.9 判断是否为回文数
  * @Auther: liaoyl
  * @Date: 2019/10/7 0007 21:37
  */
