@@ -22,13 +22,11 @@ public class MySqrt {
 
     private static int mySqrt(int x) {
 
-//        long t = 0x5f3759df - (x >> 1);
-//        while (!(t * t <= x && (t + 1) * (t + 1) > x)) {
-//            t = (x / t + t) >> 1;
-//        }
-//        return (int) t;
-
-        return (int)Math.sqrt(x);
+        long t = 0x5f3759df - (x >> 1);
+        while (!(t * t <= x && (t + 1) * (t + 1) > x)) {
+            t = (x / t + t) >> 1;
+        }
+        return (int) t;
     }
 
 
