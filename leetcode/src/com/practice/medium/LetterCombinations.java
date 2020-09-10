@@ -16,7 +16,7 @@ public class LetterCombinations {
         System.out.println(strings);
     }
 
-    static List<String> results = new ArrayList<>();
+
     static HashMap<String, String> map = new HashMap<String, String>() {{
         put("2", "abc");
         put("3", "def");
@@ -29,17 +29,15 @@ public class LetterCombinations {
     }};
 
     private static List<String> letterCombinations(String digits) {
-
+        List<String> results = new ArrayList<>();
         if (digits != null && digits.length() != 0) {
-            backTrace("", digits);
+            backTrace(results, "", digits);
         }
         return results;
 
     }
 
-    private static void backTrace(String s, String next) {
-
-
+    private static void backTrace(List<String> results, String s, String next) {
         if (next.length() == 0) {
             results.add(s);
         } else {
@@ -48,8 +46,8 @@ public class LetterCombinations {
 
             for (int i = 0; i < s1.length(); i++) {
 
-                String ll = map.get(substring).substring(i, i + 1);
-                backTrace(s + ll, next.substring(1));
+                String ll = s1.substring(i, i + 1);
+                backTrace(results, s + ll, next.substring(1));
             }
         }
 
